@@ -1,6 +1,17 @@
 require("config/bootstrap")
-local plugins = require("config/plugins")
-local opts = {
+require("lazy").setup({
+	spec = {
+		{
+			"LazyVim/LazyVim",
+			import = "lazyvim.plugins",
+			opts = {
+				colorscheme = "catppuccin",
+			},
+		},
+		{
+			import = "plugins",
+		},
+	},
 	ui = {
 		border = "rounded",
 	},
@@ -19,5 +30,4 @@ local opts = {
 			},
 		},
 	},
-}
-require("lazy").setup(plugins, opts)
+})

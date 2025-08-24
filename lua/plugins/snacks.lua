@@ -14,9 +14,6 @@ return {
 			},
 		},
 		picker = {
-			layout = {
-				fullscreen = true,
-			},
 			sources = {
 				explorer = {
 					layout = { preset = "default", preview = true },
